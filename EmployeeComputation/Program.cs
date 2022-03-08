@@ -8,6 +8,7 @@ namespace EmployeeComputation
         {
           Class1 obj=new Class1();
             obj.myMethod();
+            obj.empWages();
             
         }
     }
