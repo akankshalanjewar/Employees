@@ -11,8 +11,11 @@ namespace EmployeeComputation
         int IS_PRSENT = 1;
         int IS_ABSENT = 0; 
         int EMP_RATE_PER_HR = 20;
+        int NUM_OF_WORKING_DAY = 20;
         int empHrs = 0;
-        int empWage = 0;
+        int empWages = 0;
+        int totalSalary = 0;
+        
 
         Random random = new Random();
         public void myMethod()
@@ -30,7 +33,7 @@ namespace EmployeeComputation
 
             }
         }
-        public void empWages()
+        public void empWage()
         { 
         
 
@@ -43,11 +46,43 @@ namespace EmployeeComputation
             {
                 empHrs = 0;
             }
-            empWage = empHrs * EMP_RATE_PER_HR;
+            empWages = empHrs * EMP_RATE_PER_HR;
 
-            Console.WriteLine("EmpWage : " + empWage);
+            Console.WriteLine("EmpWages : " + empWages);
 
-       }      
+       }    
+        public void WagesOfMonth()
+        {
+            for (int i = 0; i < NUM_OF_WORKING_DAY; i++)
+            {
+                Random random = new Random();
+                int randomcheck = random.Next(0, 3);
+                switch (randomcheck)
+                {
+                    case 1:
+                        empHrs = 8;
+                        break;
+
+                    case 2:
+                        empHrs = 4;
+                        break;
+
+                    default:
+                        empHrs = 0;
+                        break;
+                }
+
+                empWages= (empHrs + EMP_RATE_PER_HR);
+                totalSalary = (totalSalary + empWages);
+
+
+
+
+            }
+            Console.WriteLine("Total Emp Wages:" + totalSalary);
+        }
+    }
+}
     }
 
 }
