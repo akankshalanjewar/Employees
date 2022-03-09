@@ -47,7 +47,28 @@ namespace EmployeeComputation
 
             Console.WriteLine("EmpWage : " + empWage);
 
-       }      
+       }  
+        public void switchCase()
+        {
+            int randomCheck = random.Next(0, 3);
+
+            switch (randomCheck)
+            {
+                case 1:
+                    empHrs = 8;
+                    break;
+                case 2:
+                    empHrs = 4;
+                    break;
+                default:
+                    empHrs = 0;
+                    break;
+
+            }
+            empWage = empHrs * EMP_RATE_PER_HR;
+            Console.WriteLine(empWage);
+
+        }
     }
 
 }
