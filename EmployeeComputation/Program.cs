@@ -6,7 +6,7 @@ namespace EmployeeComputation
     { 
         static void Main(string[] args)
         {
-          Class1 obj=new Class1();
+          Employee obj=new Employee();
             obj.myMethod();
             obj.empWages();
             
