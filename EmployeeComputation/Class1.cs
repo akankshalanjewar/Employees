@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeComputation
 {
-    public class Class1
+    public class Employeee
     {
         int IS_PRSENT = 1;
         int IS_ABSENT = 0; 
